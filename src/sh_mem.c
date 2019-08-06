@@ -54,7 +54,7 @@ int write_shared_memory(shm_elm *const shm_obj){
 	}
 	temp = shm_obj->shm_att;
 	i = 0;
-	while(shm_obj->elm.msg[i] != '\n'){
+	while(shm_obj->elm.msg[i] != 0){
 		*temp++ = shm_obj->elm.msg[i];
 		i = i + 1;
 	}
